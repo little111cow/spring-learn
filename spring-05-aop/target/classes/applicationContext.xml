@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--开启aop注解支持-->
+    <aop:aspectj-autoproxy/>
+    <!--托管类-->
+    <bean id="userservice" class="com.spring.service.UserServiceImpl"/>
+    <bean id="beforelog" class="com.spring.log.BeforeLog"/>
+    <bean id="afterlog" class="com.spring.log.AfterLog"/>
+    <bean id="mylog" class="com.spring.log.MyLog"/>
+    <bean id="annotationaop" class="com.spring.log.AnnotationAop"/>
+
+    <!--aop实现方法一：实现框架对应的MethodBeforeAdvice、AfterReturningAdvice、AfterAdvice等接口即可：-->
+    <aop:config>
+        <!--切入点可以切入多个 表达式对应的是返回值 类或者包的全路径下的某个方法，参数为任意参数-->
+        <aop:pointcut id="pointcut" expression="execution(* com.spring.service.UserServiceImpl.*(..))"/>
+        <!--织入-->
+        <aop:advisor advice-ref="beforelog" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut"/>
+    </aop:config>
+
+    <!--aop实现方法二：自定义类-->
+    <aop:config>
+        <!--自定义切面-->
+        <aop:aspect ref="mylog">
+            <aop:pointcut id="pointcut" expression="execution(* com.spring.service.UserServiceImpl.*(..))"/>
+            <!--执行前通知-->
+            <aop:before method="before" pointcut-ref="pointcut"/>
+            <!--执行后通知-->
+            <aop:after method="after" pointcut-ref="pointcut"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>

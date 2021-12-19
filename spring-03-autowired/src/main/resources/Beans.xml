@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--通过名称自动装配，基本类型填充默认值-->
+    <bean name="user" class="com.spring.entity.User" autowire="byName" p:name="haha" p:id="123" p:hobbies="1,2,3"/>
+    <!--通过类型自动装配，基本类型默认填充默认值-->
+    <bean name="user1" class="com.spring.entity.User" autowire="byType" p:name="haha" p:id="123" p:hobbies="1,2,3"/>
+
+    <bean name="dog" class="com.spring.entity.Dog"/>
+    <bean name="wife" class="com.spring.entity.Wife"/>
+
+</beans>

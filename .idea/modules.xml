@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-01-Beans/spring-01-Beans.iml" filepath="$PROJECT_DIR$/spring-01-Beans/spring-01-Beans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-02-DI/spring-02-DI.iml" filepath="$PROJECT_DIR$/spring-02-DI/spring-02-DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-03-autowired/spring-03-annotation.iml" filepath="$PROJECT_DIR$/spring-03-autowired/spring-03-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-04-annotation/spring-04-annotation.iml" filepath="$PROJECT_DIR$/spring-04-annotation/spring-04-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-learn/spring-05-aop/spring-05-aop.iml" filepath="$PROJECT_DIR$/../spring-learn/spring-05-aop/spring-05-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-learn/spring-dynamic-proxy/spring-dynamic-proxy.iml" filepath="$PROJECT_DIR$/../spring-learn/spring-dynamic-proxy/spring-dynamic-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-learn.iml" filepath="$PROJECT_DIR$/spring-learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-learn/spring-mybatis/spring-mybatis.iml" filepath="$PROJECT_DIR$/../spring-learn/spring-mybatis/spring-mybatis.iml" />
+    </modules>
+  </component>
+</project>

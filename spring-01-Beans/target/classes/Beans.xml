@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注册java Bean id为名称，class为对应托管的类全限定名-->
+    <bean id="user" class="com.spring.entity.User"/>
+
+    <!--为bean重命名，一般只有复杂环境需要-->
+    <!--将user命名为user2，在通过上下文取时，两个名字都可以取到-->
+    <alias name="user" alias="user2"/>
+
+</beans>
